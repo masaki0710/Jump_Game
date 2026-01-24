@@ -4,11 +4,11 @@ public class PlatformMover : MonoBehaviour
 {
     public float speed = 5f;
 
-    public Vector3 direction = new Vector3(-1, 0, -1);
+    public Vector3 direction = new Vector3(-1, 0, 0);
 
     void Update()
     {
-        transform.Translate(direction.normalized * speed * Time.deltaTime);
+        transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
 
         if (transform.position.x < -15f)
         {

@@ -606,7 +606,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556904337}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 6bcae3c198dc4044dbe78e71a18e0eca, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -618,7 +618,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.7, y: 0.7, z: 0.7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1556904341
 MeshRenderer:
@@ -720,7 +720,7 @@ MonoBehaviour:
   modulePrefabs:
   - {fileID: 400452413455336900, guid: 09cd9e684f4f35b4da1d6838ab7128d7, type: 3}
   - {fileID: 400452413455336900, guid: c711c26db73a23542bdce0b84f2de3b2, type: 3}
-  spawnInterval: 3
+  spawnInterval: 4
 --- !u!4 &1887714190
 Transform:
   m_ObjectHideFlags: 0

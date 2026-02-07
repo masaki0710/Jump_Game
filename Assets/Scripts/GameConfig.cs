@@ -7,6 +7,7 @@ public static class GameConfig
     // 障害物の設定
     public const float PlatformMoveSpeed = 2.0f;
     public const float ModuleSize = 13.0f;
+    public const float SpawnInterval = 6.5f;
 
     // ゲームオーバーの設定
     public const float DeathYThreshold = -5.0f;

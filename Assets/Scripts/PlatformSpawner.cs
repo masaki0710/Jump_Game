@@ -2,16 +2,14 @@ using UnityEngine;
 
 public class PlatformSpawner : MonoBehaviour
 {
-    public GameObject[] modulePrefabs
-        ;
-    public float spawnInterval = 1.0f;
+    public GameObject[] modulePrefabs;
     private float timer;
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        if (timer >= spawnInterval)
+        if (timer >= GameConfig.SpawnInterval)
         {
             SpawnPlatform();
             timer = 0;

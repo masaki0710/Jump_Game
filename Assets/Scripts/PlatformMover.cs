@@ -10,7 +10,7 @@ public class PlatformMover : MonoBehaviour
     {
         transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
 
-        if (transform.position.x < -15f)
+        if (transform.position.x < -20.0f)
         {
             Destroy(gameObject);
         }

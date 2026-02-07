@@ -4,7 +4,7 @@ public class PlatformSpawner : MonoBehaviour
 {
     public GameObject[] modulePrefabs;
     public GameObject emptyFloorPrefab;
-    public int initialRows = 4;
+    public int initialRows = 3;
     public float floorLength = 13.0f;
 
     private float timer;
@@ -12,6 +12,7 @@ public class PlatformSpawner : MonoBehaviour
     void Start()
     {
         SpawnInitialFloors();
+        SpawnPlatform();
     }
 
     void Update()

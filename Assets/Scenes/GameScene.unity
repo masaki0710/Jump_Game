@@ -5775,7 +5775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 293724e142f09b349a45d6c49418dfa3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.08
+      value: 2.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 293724e142f09b349a45d6c49418dfa3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6172,6 +6172,9 @@ MonoBehaviour:
   - {fileID: 400452413455336900, guid: 09cd9e684f4f35b4da1d6838ab7128d7, type: 3}
   - {fileID: 400452413455336900, guid: c711c26db73a23542bdce0b84f2de3b2, type: 3}
   - {fileID: 400452413455336900, guid: 6fc1c3663c4548b438620452a30cbc69, type: 3}
+  emptyFloorPrefab: {fileID: 400452413455336900, guid: eee45becc2c02ef4899eec05893b7266, type: 3}
+  initialRows: 3
+  floorLength: 13
 --- !u!4 &1887714190
 Transform:
   m_ObjectHideFlags: 0

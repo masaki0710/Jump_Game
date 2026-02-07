@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody rb;
     private Renderer[] playRenderers;
 
+    // ジャンプ時の色変化
     public Color normalColor = Color.white;
     public Color chargedColor = new Color(1f, 0.5f, 1.0f);
 
@@ -14,6 +15,9 @@ public class PlayerManager : MonoBehaviour
     private float currentJumpForce;
     private bool isCharging = false;
     private Vector2 moveInput;
+
+    // 音響関連
+    public AudioSource chargeAudioSource;
 
     void Start()
     {
@@ -58,6 +62,11 @@ public class PlayerManager : MonoBehaviour
         {
             isCharging = true;
             currentJumpForce = GameConfig.MinJumpForce;
+
+            if (chargeAudioSource != null)
+            {
+                chargeAudioSource.Play();
+            }
         }
 
         if (isCharging)
@@ -75,6 +84,17 @@ public class PlayerManager : MonoBehaviour
             if (Keyboard.current.spaceKey.wasReleasedThisFrame)
             {
                 Jump();
+
+                if (MusicManager.Instance != null)
+                {
+                    MusicManager.Instance.SetPitch(1.0f);
+                    MusicManager.Instance.SetVolumeRatio(1.0f);
+                }
+
+                if (chargeAudioSource != null)
+                {
+                    chargeAudioSource.Stop();
+                }
             }
         }
     }

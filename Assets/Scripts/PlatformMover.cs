@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlatformMover : MonoBehaviour
 {
-    public float speed = 1.0f;
+    public float speed = 2f;
 
     public Vector3 direction = new Vector3(-1, 0, 0);
 

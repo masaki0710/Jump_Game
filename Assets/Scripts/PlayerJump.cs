@@ -6,6 +6,7 @@ public class PlayerJump : MonoBehaviour
 {
 
     public float moveSpeed = 7f;
+    public float platformSpeed = 2f; // 足場の移動速度
     public float minJumpForce = 5f; // 最小ジャンプ力
     public float maxJumpForce = 15f; // 最大ジャンプ力
     public float chargeSpeed = 10f; // 1秒間に溜まる力
@@ -76,6 +77,7 @@ public class PlayerJump : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 currentVel = rb.linearVelocity;
+
         rb.linearVelocity = new Vector3(moveInput.x * moveSpeed, currentVel.y, moveInput.y * moveSpeed);
     }
 
@@ -88,5 +90,23 @@ public class PlayerJump : MonoBehaviour
         isGrounded = false;
         isCharging = false;
         currentJumpForce = 0f;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            isGrounded = true;
+            transform.SetParent(collision.transform);
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            isGrounded = false;
+            transform.SetParent(null);
+        }
     }
 }

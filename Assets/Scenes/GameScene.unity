@@ -284,8 +284,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20038827, y: 0.52412885, z: -0.12841342, w: 0.81770617}
-  m_LocalPosition: {x: -11.512718, y: 10.218139, z: -7.352728}
+  m_LocalRotation: {x: 0.13018933, y: 0.58499575, z: -0.095730685, w: 0.7947744}
+  m_LocalPosition: {x: -6.8612466, y: 6.425793, z: -4.4986734}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -764,8 +764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703a9ceb7cc6dd14abc6f1c9f2b5d1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  chargedColor: {r: 1, g: 0.5, b: 1, a: 1}
+  normalColor: {r: 0.63834995, g: 0.78654, b: 0.8962264, a: 1}
+  chargedColor: {r: 0.7229613, g: 0.43867922, b: 1, a: 1}
   chargeAudioSource: {fileID: 932103328}
 --- !u!54 &932103322
 Rigidbody:
@@ -6120,7 +6120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -6337,7 +6337,7 @@ GameObject:
   - component: {fileID: 1887714190}
   - component: {fileID: 1887714189}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: ObstaclesSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6356,13 +6356,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modulePrefabs:
+  - {fileID: 400452413455336900, guid: eee45becc2c02ef4899eec05893b7266, type: 3}
   - {fileID: 400452413455336900, guid: 09cd9e684f4f35b4da1d6838ab7128d7, type: 3}
   - {fileID: 400452413455336900, guid: 1a8fefe40af89bd47b9ebb80ae9db9ad, type: 3}
   - {fileID: 400452413455336900, guid: c711c26db73a23542bdce0b84f2de3b2, type: 3}
   - {fileID: 400452413455336900, guid: 6fc1c3663c4548b438620452a30cbc69, type: 3}
+  - {fileID: 400452413455336900, guid: 014675da271166a488b23758769053f9, type: 3}
   emptyFloorPrefab: {fileID: 400452413455336900, guid: eee45becc2c02ef4899eec05893b7266, type: 3}
   initialRows: 3
-  floorLength: 13
 --- !u!4 &1887714190
 Transform:
   m_ObjectHideFlags: 0

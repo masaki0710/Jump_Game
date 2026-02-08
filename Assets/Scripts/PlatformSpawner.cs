@@ -5,7 +5,6 @@ public class PlatformSpawner : MonoBehaviour
     public GameObject[] modulePrefabs;
     public GameObject emptyFloorPrefab;
     public int initialRows = 3;
-    public float floorLength = 13.0f;
 
     private float timer;
 
@@ -30,7 +29,7 @@ public class PlatformSpawner : MonoBehaviour
     {
         for (int i = 0; i < initialRows; i++)
         {
-            Vector3 spawnPos = transform.position - (Vector3.right * floorLength * i);
+            Vector3 spawnPos = transform.position - (Vector3.right * GameConfig.ObstacleFloorLength * i);
 
             GameObject prefabToSpawn = emptyFloorPrefab != null ? emptyFloorPrefab : modulePrefabs[0];
             Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);

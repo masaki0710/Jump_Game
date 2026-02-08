@@ -2,13 +2,11 @@ using UnityEngine;
 
 public class PlatformMover : MonoBehaviour
 {
-    public float speed = 2f;
-
     public Vector3 direction = new Vector3(-1, 0, 0);
 
     void Update()
     {
-        transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
+        transform.Translate(direction.normalized * GameConfig.PlatformMoveSpeed * Time.deltaTime, Space.World);
 
         if (transform.position.x < -20.0f)
         {

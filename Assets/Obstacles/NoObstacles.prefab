@@ -62,7 +62,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 727ecec4eecd90d48b73a5c9771ed553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
   direction: {x: -1, y: 0, z: 0}
 --- !u!65 &-6688949059673597666
 BoxCollider:
@@ -93,6 +92,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7873525139679934590}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 30c69802327d7204d94cac6473d58492, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30c69802327d7204d94cac6473d58492, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.7

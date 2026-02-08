@@ -7,10 +7,10 @@ public static class GameConfig
     public const float JumpChargeSpeed = 2.0f;
 
     // 障害物の設定
-    public const float PlatformMoveSpeed = 2.0f;
-    public const float ModuleSize = 13.0f;
-    public const float ObstacleFloorWidth = 8.0f;
-    public const float SpawnInterval = 6.5f;
+    public const float PlatformMoveSpeed = 3.0f;
+    public const float ObstacleFloorLength = 15f;
+    public const float ObstacleFloorWidth = 8f;
+    public const float SpawnInterval = ObstacleFloorLength / PlatformMoveSpeed;
 
     // ゲームオーバーの設定
     public const float DeathYThreshold = -5.0f;

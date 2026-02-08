@@ -117,16 +117,8 @@ public class PlayerManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 moveVel = new Vector3(moveInput.x * GameConfig.DefaultPlayerMoveSpeed, 0, moveInput.y * GameConfig.DefaultPlayerMoveSpeed);
-        Vector3 platformVel = Vector3.left * GameConfig.PlatformMoveSpeed;
-        float yVel = rb.linearVelocity.y;
-
-        rb.linearVelocity = new Vector3(moveVel.x + platformVel.x, yVel, moveVel.z);
-
-        Vector3 clampedPosition = rb.position;
-        clampedPosition.z = Mathf.Clamp(clampedPosition.z, -GameConfig.ObstacleFloorWidth/2.0f, GameConfig.ObstacleFloorWidth/2.0f);
-
-        rb.position = clampedPosition;
+        ApplyMovement();
+        ApplyPositionClamp();
     }
 
     private void ApplyMovement()
@@ -138,8 +130,15 @@ public class PlayerManager : MonoBehaviour
 
     private void ApplyPositionClamp()
     {
+        //Vector3 clampedPosition = rb.position;
+        //clampedPosition.z = Mathf.Clamp(clampedPosition.z, -GameConfig.ObstacleFloorWidth, GameConfig.ObstacleFloorWidth / 2);
+        //rb.position = clampedPosition;
+
         Vector3 clampedPosition = rb.position;
-        clampedPosition.z = Mathf.Clamp(clampedPosition.z, -GameConfig.ObstacleFloorWidth, GameConfig.ObstacleFloorWidth);
+
+        float halfWidth = GameConfig.ObstacleFloorWidth / 2f;
+
+        clampedPosition.z = Mathf.Clamp(clampedPosition.z, -halfWidth, halfWidth);
         rb.position = clampedPosition;
     }
 
